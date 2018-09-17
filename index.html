@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lista telefônica</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="row header align-items-center">
+            <div class="col-sm-9 col-md-6">
+                <h2>Lista telefônica</h2>
+            </div>
+            <div class="col-sm-3 col-md-6 text-right">
+                <a href="#" id="add" class="btn btn-primary" data-toggle="modal" data-target="#modal-add">Adicionar</a>
+            </div>
+        </div>
+
+        <div class="row campo-busca">
+            <div class="col-sm-12 col-md-4">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Buscar</span>
+                    </div>
+                    <input type="text" id="search" class="form-control">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <table class="table table-telefones table-bordered">
+                <thead>
+                    <th>Nome</th>
+                    <th>Telefone</th>
+                    <th>Ações</th>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <div id="modal-add" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Adicionar contato</h5>
+                    <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button>
+                </div>
+
+                <form method="GET" id="form-add">
+                    <div class="modal-body">
+                        <table>
+                            <tr>
+                                <td class="text-right">Nome: </td>
+                                <td><input type="text" name="nome" class="form-control"></td>
+                            </tr>
+                            <tr>
+                                <td class="text-right">Telefone: </td>
+                                <td><input type="text" name="telefone" class="form-control"></td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                    <div class="modal-footer">
+                        <button type="button" data-dismiss="modal" class="btn btn-secondary">Fechar</button>
+                        <input type="submit" value="Adicionar" class="btn btn-primary">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <script src="main.js"></script>
+</body>
+</html>
